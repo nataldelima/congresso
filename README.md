@@ -18,9 +18,6 @@ Você pode acessar o projeto publicado via GitHub Pages em:
 
 👉 [`https://nataldelima.github.io/congresso`](https://nataldelima.github.io/congresso)
 
-Ou gerar dinamicamente com parâmetro:
-
-👉 `https://nataldelima.github.io/congresso/?titulo=NomeDoParticipante`
 
 ## 🚀 Como usar
 
@@ -30,6 +27,7 @@ Ou gerar dinamicamente com parâmetro:
 4. Clique com o botão direito do mouse e selecione **"Imprimir"** ou use `Ctrl + P`.
 
 ## 📁 Estrutura do Projeto
+```plaintext
 📦 congresso
 ┣ 📄 index.html
 ┣ 📄 style.css
@@ -37,7 +35,7 @@ Ou gerar dinamicamente com parâmetro:
 ┣ 📁 assets
 ┃ ┗ 📷 bg-congresso.png
 ┗ 📄 README.md
-
+```
 ## 🛠️ Tecnologias Utilizadas
 
 - HTML5
