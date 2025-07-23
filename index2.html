@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Placa - Informações e Serviço Voluntário</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 297mm;
+      height: 210mm;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .formulario {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    input[type="text"] {
+      padding: 8px 16px;
+      font-size: 16px;
+      width: 300px;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .titulo {
+      text-align: center;
+      color: #003366;
+      padding: 40px 20px 20px;
+    }
+
+    .titulo h1 {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .titulo h2 {
+      font-size: 22px;
+      color: #2c6b3d;
+      font-weight: 500;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+
+    .tema {
+      font-weight: 100 !important;
+    }
+
+    .container {
+      background: url('bg-congresso.png') no-repeat center center;
+      background-size: cover;
+      height: calc(100% - 150px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .placa {
+      background-color: rgba(255, 255, 255, 0.75);
+      padding: 30px 50px;
+      border-radius: 12px;
+      text-align: center;
+      margin: 0 50px;
+    }
+
+    .placa h1 {
+      color: #003366;
+      font-size: 80px;
+      font-weight: 600;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    @media print {
+      .formulario {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="titulo">
+    <h1 class="tema">Adoração Pura</h1>
+    <h2>2025 — Congresso das Testemunhas de Jeová</h2>
+  </div>
+
+  <div class="formulario">
+    <h2 class="titulo">Digite o nome do departamento</h2>
+    <input type="text" id="inputTexto" placeholder="Digite o nome do departamento" />
+    <button onclick="atualizarTexto()">Atualizar</button>
+    <button onclick="window.print()">Imprimir</button>
+  </div>
+
+  <div class="container">
+    <div class="placa">
+      <h1 id="textoPlaca"></h1>
+    </div>
+  </div>
+
+  <script>
+    function atualizarTexto() {
+      const texto = document.getElementById("inputTexto").value.trim();
+      const placa = document.getElementById("textoPlaca");
+
+
+      placa.textContent = texto || ""; // padrão caso vazio
+
+      // Ajusta o tamanho da fonte com base no comprimento
+      if (texto.length > 10) {
+        placa.style.fontSize = "50px";
+      } else {
+        placa.style.fontSize = "80px";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
